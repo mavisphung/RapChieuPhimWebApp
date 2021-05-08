@@ -1,0 +1,46 @@
+﻿
+.navbar ul.navbar-nav a.nav-link {
+    font-size: 16px;
+}
+
+.form-group > label {
+    margin-bottom: 0;
+    margin-top: .5rem;
+}
+
+input, textarea {
+    -webkit-appearance:auto;
+}
+
+.form-check {
+    margin-bottom: .5rem;
+}
+
+.movie__info .img-thumbnail {
+    width: 180px;
+    height: 260px;
+    cursor: pointer;
+}
+
+div#dialog-message p {
+    margin: 0;
+}
+
+@@media (min-width: 768px) {
+    .form-group > label {
+        text-align: right;
+    }
+
+    .movie__info .poster {
+        float: left!important;
+        width: 200px!important;
+    }
+}
+
+@@media (max-width: 767px) {
+    .movie__info .poster {
+        width: 100%!important;
+    }
+}
+
+

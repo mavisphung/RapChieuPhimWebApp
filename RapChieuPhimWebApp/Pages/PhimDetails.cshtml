@@ -1,0 +1,49 @@
+﻿@page
+@model RapChieuPhimWebApp.Pages.PhimDetailsModel
+@{
+    ViewData["Title"] = "Thông tin phim";
+}
+
+<div class="col-sm-12">
+    <div class="movie">
+        <h2 class="page-heading">@Model.Phim.TenPhim</h2>
+        <div class="movie__info row">
+            <div class="col-sm-4 col-md-3">
+                <div class="movie__images mb-2">
+                    <img src="data:image/png;base64, @Model.Phim.Poster" alt="@Model.Phim.TenPhim">
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <p class="movie__time">Thời lượng: @(Model.Phim.ThoiLuong == 0 ? "Chưa cập nhật" : $"{Model.Phim.ThoiLuong} phút")</p>
+
+                <p class="movie__option"><strong>Nước sản xuất: </strong>@Model.Phim.NuocSanXuat</p>
+                <p class="movie__option">
+                    <strong>Hãng sản xuất: </strong><a href="#">@(string.IsNullOrEmpty(Model.Phim.NhaSanXuat) ? "Chưa cập nhật" : Model.Phim.NhaSanXuat)</a>
+                </p>
+                <p class="movie__option">
+                    <strong>Thể loại: </strong>
+                    @Model.Phim.GetTenTheLoais(Model.DanhSachTheLoaiPhim)
+                </p>
+                <p class="movie__option">
+                    <strong>Ngày khởi chiếu: </strong>
+                    @(Model.Phim.NgayKhoiChieu == null ? "Chưa cập nhật" : Model.Phim.NgayKhoiChieu.Value.ToString("dd/MM/yyyy"))
+                </p>
+                <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">@Model.Phim.DaoDien</a></p>
+                <p class="movie__option">
+                    <strong>Diễn viên: </strong>@Model.Phim.DienVien
+                </p>
+                <p class="movie__option"><strong>@Model.Phim.XepHangPhim.Ten</strong></p>
+
+                <div class="movie__btns movie__btns--full">
+                    <a href="#" class="btn btn-md btn--warning">Đặt vé</a>
+                    <a href="#" class="watch-trailer">Trailer</a>
+                </div>
+
+            </div>
+        </div>
+        <p class="movie__describe mt-2">
+            @Model.Phim.NoiDung
+        </p>
+    </div>
+</div>
+<div class="text-danger"></div>

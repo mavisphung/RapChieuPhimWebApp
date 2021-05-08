@@ -1,13 +1,64 @@
 ﻿<!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC Cinema</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/phim-style.css" />
+    <script src="js/external/jquery-3.1.1.min.js"></script>
+    <!-- Migrate -->
+    <script src="js/external/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img alt='logo' src="~/images/csc-cinema-logo.png" style="height: 50px;" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/PhimList">Danh Sách Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Thêm Phim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;@DateTime.Today.Year - CSC Cinema - <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery.mobile.menu.js"></script>
+    <script src="~/js/external/jquery.selectbox-0.2.min.js"></script>
+    <!-- Stars rate -->
+    <script src="~/js/external/jquery.raty.js"></script>
+    <!-- Form element -->
+    <script src="~/js/external/form-element.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/js/external/modernizr.custom.js"></script>
+    <script type="text/javascript" src="~/js/custom.js"></script>
+    <script src="~/js/site.js"></script>
 </body>
 </html>

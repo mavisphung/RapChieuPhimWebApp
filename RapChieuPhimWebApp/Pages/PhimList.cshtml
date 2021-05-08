@@ -1,0 +1,230 @@
+﻿@page
+@model RapChieuPhimWebApp.Pages.PhimListModel
+@{
+    ViewData["Title"] = "Danh sách phim";
+}
+<div class="col-sm-12">
+    <h2 class="page-heading">Danh sách phim </h2>
+    <div class="select-area">
+        <form method="get" id="myform">
+            <div class="form-group row">
+                <label for="category" class="col-sm-2 text-sm-right pt-2">Thể loại: </label>
+                <select id="category" class="form-control col-sm-3 mb-2" onchange="myform.submit()"
+                        data-val="true" data-val-required="The TheLoaiId field is required." name="TheLoaiId">
+                    <option value="0" selected="selected">--- Liệt kê tất cả ---</option>
+                    <option value="1">Bí ẩn</option>
+                    <option value="2">Gia đình</option>
+                    <option value="3">Hoạt Hình</option>
+                    <option value="4">Hài</option>
+                </select>
+                <div class="ml-auto">
+                    <a class="btn btn--success" style="color: #fff; " href="PhimCreate.html">
+                        <i class="fa fa-plus-square" aria-hidden="true" style="font-size: 16px;"></i> Thêm
+                        phim mới
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Movie preview item -->
+    <div class="movie movie--preview movie--full release row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="movie__images">
+                <a href="PhimDetails.html">
+                    <img src="images/movie/h1.png" alt="CHÀNG VỢ CỦA EM" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+            <a class="movie__title link--huge" href="PhimDetails.html">CHÀNG VỢ CỦA EM</a>
+
+            <p class="movie__time">120 phút</p>
+
+            <p class="movie__option"><strong>Nước sản xuất: </strong><a href="#">Việt Nam</a></p>
+            <p class="movie__option"><strong>Hãng sản xuất: </strong><a href="#">CJ Entertainment</a></p>
+            <p class="movie__option">
+                <strong>Thể loại: </strong>
+                Hài,Tâm Lý
+            </p>
+            <p class="movie__option"><strong>Ngày khởi chiếu: </strong>13/12/2020</p>
+            <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">Charlie Nguyễn</a></p>
+            <p class="movie__option">
+                <strong>Diễn viên: </strong>Thái Hoà, Phương Anh Đào, Hứa Vĩ Văn, Vân
+                Trang, Thanh Trúc, Hồng Hạnh...
+            </p>
+            <p class="movie__option"><strong>Phim cấm khán giả dưới 16 tuổi </strong></p>
+
+            <div class="movie__btns">
+                <a href="#" class="btn btn-md btn-- btn--warning">Đặt vé</a>
+                <a href="#" class="watch-trailer">Trailer</a>
+                <div class="clearfix"></div>
+                <a class="btn btn--default" style="margin-top:20px;color:#fff;" href="PhimEdit.html">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:16px;"></i> Edit
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end movie preview item -->
+    <!-- Movie preview item -->
+    <div class="movie movie--preview movie--full release row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="movie__images">
+                <a href="PhimDetails.html">
+                    <img src="images/movie/h2.png" alt="VÔ DIỆN SÁT NHÂN" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+            <a class="movie__title link--huge" href="PhimDetails.html">VÔ DIỆN SÁT NHÂN</a>
+
+            <p class="movie__time">Chưa cập nhật</p>
+
+            <p class="movie__option"><strong>Nước sản xuất: </strong><a href="#">Việt Nam</a></p>
+            <p class="movie__option"><strong>Hãng sản xuất: </strong><a href="#">Chưa cập nhật</a></p>
+            <p class="movie__option">
+                <strong>Thể loại: </strong>
+                Kinh Dị
+            </p>
+            <p class="movie__option"><strong>Ngày khởi chiếu: </strong>31/12/1899</p>
+            <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">Đinh Công Hiếu</a></p>
+            <p class="movie__option">
+                <strong>Diễn viên: </strong>Phương Anh Đào, Quách Ngọc Tuyên, Hiếu
+                Nguyễn, Oanh Kiều
+            </p>
+            <p class="movie__option"><strong>Phim cấm khán giả dưới 16 tuổi </strong></p>
+
+            <div class="movie__btns">
+                <a href="#" class="btn btn-md btn-- btn--warning">Đặt vé</a>
+                <a href="#" class="watch-trailer">Trailer</a>
+                <div class="clearfix"></div>
+                <a class="btn btn--default" style="margin-top:20px;color:#fff;" href="PhimEdit.html">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:16px;"></i> Edit
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end movie preview item -->
+    <!-- Movie preview item -->
+    <div class="movie movie--preview movie--full release row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="movie__images">
+                <a href="PhimDetails.html">
+                    <img src="images/movie/h3.png" alt="SADAKO - VÒNG LUÂN HỒI" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+            <a class="movie__title link--huge" href="PhimDetails.html">SADAKO - VÒNG LUÂN HỒI</a>
+
+            <p class="movie__time">100 phút</p>
+
+            <p class="movie__option"><strong>Nước sản xuất: </strong><a href="#">Nhật Bản</a></p>
+            <p class="movie__option"><strong>Hãng sản xuất: </strong><a href="#">Chưa cập nhật</a></p>
+            <p class="movie__option">
+                <strong>Thể loại: </strong>
+                Hồi hộp,Kinh Dị,Tội phạm
+            </p>
+            <p class="movie__option"><strong>Ngày khởi chiếu: </strong>16/07/2019</p>
+            <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">Hideo Nakata</a></p>
+            <p class="movie__option">
+                <strong>Diễn viên: </strong>Elaiza Ikeda, Himeka Himejima, Hiroya
+                Shimizu
+            </p>
+            <p class="movie__option"><strong>Phim cấm khán giả dưới 16 tuổi </strong></p>
+
+            <div class="movie__btns">
+                <a href="#" class="btn btn-md btn-- btn--warning">Đặt vé</a>
+                <a href="#" class="watch-trailer">Trailer</a>
+                <div class="clearfix"></div>
+                <a class="btn btn--default" style="margin-top:20px;color:#fff;" href="PhimEdit.html">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:16px;"></i> Edit
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end movie preview item -->
+    <!-- Movie preview item -->
+    <div class="movie movie--preview movie--full release row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="movie__images">
+                <a href="PhimDetails.html">
+                    <img src="images/movie/h4.png" alt="CLARA VÀ KHU RỪNG KỲ BÍ" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+            <a class="movie__title link--huge" href="PhimDetails.html">CLARA VÀ KHU RỪNG KỲ BÍ</a>
+
+            <p class="movie__time">87 phút</p>
+
+            <p class="movie__option"><strong>Nước sản xuất: </strong><a href="#">Chưa cập nhật</a></p>
+            <p class="movie__option"><strong>Hãng sản xuất: </strong><a href="#">Chưa cập nhật</a></p>
+            <p class="movie__option">
+                <strong>Thể loại: </strong>
+                Gia đình,Hoạt Hình,Hài
+            </p>
+            <p class="movie__option"><strong>Ngày khởi chiếu: </strong>05/12/2019</p>
+            <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">Oleksandr Klymenko</a></p>
+            <p class="movie__option"><strong>Diễn viên: </strong></p>
+            <p class="movie__option"><strong>Phim dành cho mọi đối tượng </strong></p>
+
+            <div class="movie__btns">
+                <a href="#" class="btn btn-md btn-- btn--warning">Đặt vé</a>
+                <a href="#" class="watch-trailer">Trailer</a>
+                <div class="clearfix"></div>
+                <a class="btn btn--default" style="margin-top:20px;color:#fff;" href="PhimEdit.html">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:16px;"></i> Edit
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end movie preview item -->
+    <!-- Movie preview item -->
+    <div class="movie movie--preview movie--full release row">
+        <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="movie__images">
+                <a href="PhimDetails.html">
+                    <img src="images/movie/h5.png" alt="KHÔNG PHẢI LÚC CHẾT" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+            <a class="movie__title link--huge" href="PhimDetails.html">KHÔNG PHẢI LÚC CHẾT</a>
+
+            <p class="movie__time">120 phút</p>
+
+            <p class="movie__option"><strong>Nước sản xuất: </strong><a href="#">Mỹ</a></p>
+            <p class="movie__option"><strong>Hãng sản xuất: </strong><a href="#">Chưa cập nhật</a></p>
+            <p class="movie__option">
+                <strong>Thể loại: </strong>
+                Hành Động
+            </p>
+            <p class="movie__option"><strong>Ngày khởi chiếu: </strong>11/11/2020</p>
+            <p class="movie__option"><strong>Đạo diễn: </strong><a href="#">Cary Joji Fukunaga</a></p>
+            <p class="movie__option"><strong>Diễn viên: </strong>Daniel Craig, Rami Malek, Léa Seydoux </p>
+            <p class="movie__option"><strong>Phim cấm khán giả dưới 16 tuổi </strong></p>
+
+            <div class="movie__btns">
+                <a href="#" class="btn btn-md btn-- btn--warning">Đặt vé</a>
+                <a href="#" class="watch-trailer">Trailer</a>
+                <div class="clearfix"></div>
+                <a class="btn btn--default" style="margin-top:20px;color:#fff;" href="PhimEdit.html">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size:16px;"></i> Edit
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!-- end movie preview item -->
+
+
+    <div class="pagination paginatioon--full mt-2">
+        <a class="pagination__prev disabled" href="#">prev</a>
+        <a class="pagination__next " href="#">next</a>
+    </div>
+</div>
