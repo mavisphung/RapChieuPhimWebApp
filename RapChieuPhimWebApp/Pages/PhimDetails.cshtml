@@ -16,7 +16,7 @@
             <div class="col-sm-8 col-md-9">
                 <p class="movie__time">Thời lượng: @(Model.Phim.ThoiLuong == 0 ? "Chưa cập nhật" : $"{Model.Phim.ThoiLuong} phút")</p>
 
-                <p class="movie__option"><strong>Nước sản xuất: </strong>@Model.Phim.NuocSanXuat</p>
+                <p class="movie__option"><strong>Nước sản xuất: </strong>@(string.IsNullOrEmpty(Model.Phim.NuocSanXuat) ? "Chưa cập nhật" : Model.Phim.NuocSanXuat)</p>
                 <p class="movie__option">
                     <strong>Hãng sản xuất: </strong><a href="#">@(string.IsNullOrEmpty(Model.Phim.NhaSanXuat) ? "Chưa cập nhật" : Model.Phim.NhaSanXuat)</a>
                 </p>
